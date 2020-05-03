@@ -11,20 +11,74 @@
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/9dc108a71f.js" crossorigin="anonymous"></script>
+
     <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/login-baner.css" rel="stylesheet">
 </head>
 
 <body>
-    <section class="login-banner">
-        <div class="login-box">
+    <section id="login-banner">
+        <div class="window-box">
             <h1>Login</h1>
             <div class="textbox">
+                <i class="fas fa-users"></i>
                 <input type="text" placeholder="username" name="" value="">
             </div>
             <div class="textbox">
+                <i class="fas fa-lock"></i>
                 <input type="password" placeholder="password" name="" value="">
             </div>
-            <input class="btn" type="button" name="" value="Sign in">
+            <div class="btn-box">
+                <button type="button" class="toggle-btn sign-in" onclick="login()">Login In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
         </div>
     </section>
+    <section id="register-banner">
+        <div class="window-box">
+            <h1>Register VOD.pl</h1>
+            <div class="textbox">
+                <i class="fas fa-users"></i>
+                <input type="text" placeholder="username" name="" value="">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="password" name="" value="">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="confirm password" name="" value="">
+            </div>
+            <div class="btn-box">
+                <button type="button" class="toggle-btn" onclick="back_to_login()">Back</button>
+                <button type="button" class="toggle-btn register" onclick="register_now()">Register now</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        var x = document.getElementById("login-banner");
+        var y = document.getElementById("register-banner");
+
+        //    window login
+        function login() {
+
+        }
+        function register() {
+            x.style.top = "-100vh";
+            y.style.top = "-100vh";
+        }
+
+        //    window register
+        function back_to_login() {
+            x.style.top = "0";
+            y.style.top = "0";
+        }
+        function register_now() {
+
+        }
+    </script>
 </body>
+
+</html>

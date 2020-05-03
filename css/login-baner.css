@@ -1,0 +1,88 @@
+#login-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+/* .main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+} */
+.window-box {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+h1 {
+  align-self: flex-start;
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #ff9800;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+
+.textbox {
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #ff9800;
+}
+
+.textbox i {
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+
+.textbox input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80px;
+  float: left;
+  margin: 0 10px;
+}
+.btn-box {
+  display: flex;
+  flex-direction: row;
+}
+.toggle-btn {
+  background: none;
+  border: 2px solid #ff9800;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 12px 0;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: rgb(61, 61, 61);
+}
+.sign-in {
+  flex-grow: 1;
+  margin-right: 4px;
+}
+#register-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.register {
+  flex-grow: 1;
+  margin-left: 4px;
+}
