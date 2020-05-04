@@ -22,13 +22,13 @@
     <section id="login-banner">
         <div class="window-box">
             <h1>Login</h1>
-            <div class="textbox">
+            <div class="text-box">
                 <i class="fas fa-users"></i>
-                <input type="text" placeholder="username" name="" value="">
+                <input type="text" id="login-banner__login-field" placeholder="username" name="" value="">
             </div>
-            <div class="textbox">
+            <div class="text-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="password" name="" value="">
+                <input type="password" id="login-banner__password-field" placeholder="password" name="" value="">
             </div>
             <div class="btn-box">
                 <button type="button" class="toggle-btn sign-in" onclick="login()">Login In</button>
@@ -39,17 +39,18 @@
     <section id="register-banner">
         <div class="window-box">
             <h1>Register VOD.pl</h1>
-            <div class="textbox">
+            <div class="text-box">
                 <i class="fas fa-users"></i>
-                <input type="text" placeholder="username" name="" value="">
+                <input type="text" id="register-banner__login-field" placeholder="username" name="" value="">
             </div>
-            <div class="textbox">
+            <div class="text-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="password" name="" value="">
+                <input type="password" id="register-banner__password-field" placeholder="password" name="" value="">
             </div>
-            <div class="textbox">
+            <div class="text-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="confirm password" name="" value="">
+                <input type="password" id="register-banner__password1-field" placeholder="confirm password" name=""
+                    value="">
             </div>
             <div class="btn-box">
                 <button type="button" class="toggle-btn" onclick="back_to_login()">Back</button>
@@ -58,22 +59,34 @@
         </div>
     </section>
     <script>
-        var x = document.getElementById("login-banner");
-        var y = document.getElementById("register-banner");
+        var login_banner = document.getElementById("login-banner");
+        var register_banner = document.getElementById("register-banner");
+
+        var login_banner_login_field = document.getElementById("login-banner__login-field");
+        var login_banner_password_field = document.getElementById("login-banner__password-field");
+        var register_banner_login_field = document.getElementById("register-banner__login-field");
+        var register_banner_password_field = document.getElementById("register-banner__password-field");
+        var register_banner_password1_field = document.getElementById("register-banner__password1-field");
 
         //    window login
         function login() {
-
+            console.log(login_banner_login_field.value);
+            console.log(login_banner_password_field.value);
         }
         function register() {
-            x.style.top = "-100vh";
-            y.style.top = "-100vh";
+            login_banner.style.top = "-100vh";
+            register_banner.style.top = "-100vh";
+            login_banner_login_field.value = "";
+            login_banner_password_field.value = "";
         }
 
         //    window register
         function back_to_login() {
-            x.style.top = "0";
-            y.style.top = "0";
+            login_banner.style.top = "0";
+            register_banner.style.top = "0";
+            register_banner_login_field.value = "";
+            register_banner_password_field.value = "";
+            register_banner_password_field1.value = "";
         }
         function register_now() {
 
